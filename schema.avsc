@@ -1,0 +1,24 @@
+{
+  "doc": "schema for city in avro producer",
+  "fields": [
+    {
+      "doc": "Unicode Character Sequence String for City's Name",
+      "name": "cityName_string",
+      "type": "string"
+    },
+    {
+      "doc": "Float for the given City's Temperature",
+      "name": "cityTemperature_double",
+      "type": "float"
+    },
+    {
+      "doc": "Date of the reading",
+      "logicalType": "date",
+      "name": "readingDate_date",
+      "type": "string"
+    }
+  ],
+  "name": "city_schema",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}
