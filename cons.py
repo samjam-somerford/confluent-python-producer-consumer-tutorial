@@ -9,11 +9,11 @@ import time
 # in confluent cloud - just change these values when connecting to a new 
 # cluster
 
-conf = {'bootstrap.servers': 'pkc-41wq6.eu-west-2.aws.confluent.cloud:9092',
+conf = {'bootstrap.servers': '*** ENTER YOUR BOOTSTRAP URL HERE ***',
         'security.protocol': 'SASL_SSL',
         'sasl.mechanism': 'PLAIN',
-        'sasl.username': 'MQQDTEAGSJFTAURQ',
-        'sasl.password': 'py1KVzV7lyigMU1EmksyWShkosZEnmX+uTZD53e+I9DFzJhBgUA6A34jzYKliOlE',
+        'sasl.username': '*** ENTER YOUR API KEY HERE ***',
+        'sasl.password': '*** ENTER YOUR API KEY SECRET HERE ***',
         'group.id': 'foo',
         'enable.auto.commit': 'true',
         'auto.offset.reset': 'earliest',
@@ -51,5 +51,5 @@ def consume_loop(consumer, topics):
         # Close down consumer to commit final offsets.
         consumer.close()
 
-topic_to_consume = ["tutorial_topic"]
+topic_to_consume = ["*** ENTER YOUR TOPIC NAME HERE ***"]
 consume_loop(consumerInst, topic_to_consume)
