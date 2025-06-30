@@ -9,11 +9,11 @@ import time
 # in confluent cloud - just change these values when connecting to a new 
 # cluster
 
-conf = {'bootstrap.servers': 'pkc-41wq6.eu-west-2.aws.confluent.cloud:9092',
+conf = {'bootstrap.servers': '*** ENTER YOUR BOOTSTRAP URL HERE ***',
         'security.protocol': 'SASL_SSL',
         'sasl.mechanism': 'PLAIN',
-        'sasl.username': 'MQQDTEAGSJFTAURQ',
-        'sasl.password': 'py1KVzV7lyigMU1EmksyWShkosZEnmX+uTZD53e+I9DFzJhBgUA6A34jzYKliOlE',
+        'sasl.username': '*** ENTER YOUR API KEY HERE ***',
+        'sasl.password': '*** ENTER YOUR API KEY SECRET HERE ***',
         'client.id': socket.gethostname()}
 
 def acked(err, msg):
@@ -46,11 +46,6 @@ def basic_producer_loop(topic, config):
         produce(topic, config)
         time.sleep(5)
 
-def main(config):
-  topic = "faker_topic_0"
-
-  produce(topic, config)
-
 # simple way to call the produce loop with a given topic name
-topic_to_produce_to = "tutorial_topic"
+topic_to_produce_to = "*** ENTER YOUR TOPIC NAME HERE ***"
 basic_producer_loop(topic_to_produce_to, conf)
