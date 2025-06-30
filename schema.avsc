@@ -18,7 +18,7 @@
       "type": "string"
     }
   ],
-  "name": "city_schema",
+  "name": "city_tutorial_schema",
   "namespace": "com.mycorp.mynamespace",
   "type": "record"
 }
