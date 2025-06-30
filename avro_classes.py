@@ -32,9 +32,12 @@ def get_schema(val):
   # creates a new schema registry client instance, and using the schema reg
   # endpoint and the name of the schema, imports the avro schema from confluent cloud
   schema_registry_client_instance = SchemaRegistryClient({
-    'url': 'https://psrc-8qmnr.eu-west-2.aws.confluent.cloud',
-    'basic.auth.user.info': 'FZMR46IXTWERIT7I:sUeRvvfHkHJaL9iKzswghBSQXPrbqMP7AIcH+qsP4YQ5NN/p43MMr1W4nOmsv7YR'
+    'url': '*** ENTER YOUR SCHEMA REGISTRY URL HERE ***',
+    'basic.auth.user.info': '*** ENTER SCHEMA REG API KEY ***:*** ENTER SCHEMA REG API KEY SECRET ***'
    })
+
+   # format is "key:secret" in case you have difficulty here
+   
   
   if val == 1:
     return schema_registry_client_instance
