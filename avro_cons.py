@@ -63,28 +63,7 @@ def consume_loop(deserializer, consumer, topics):
                                       cityTemp_msg.cityTemperature_double,
                                       cityTemp_msg.readingDate_date))
            
-            # TESTS AND STREAM PROCESSING EXAMPLES
-              
-                # city list temperature threshold test
-                cities_consumed.append([cityTemp_msg.cityName_string, cityTemp_msg.cityTemperature_double])
-                cityList = check_if_above_threshold(cities_consumed, 27.0)
-                cityList_sorted = sorted(cityList, key = lambda x: x[1], reverse = True)
-                print("Cities above 27 Degrees: ",cityList_sorted, "\n")
-
-
-                # city list duplicate test
-                  #  cities_consumed.append(cityTemp_msg.cityName_string)
-                  #  cityList = sorted(check_for_duplicates(cities_consumed))
-                  #  print(cityList)
-
-
-
-
-                time.sleep(0.1)
-                # Store the offset associated with msg to a local cache.
-                # Stored offsets are committed to Kafka by a background thread every 'auto.commit.interval.ms'.
-                # Explicitly storing offsets after processing gives at-least once semantics.
-                # consumer.store_offsets(msg)
+                time.sleep(2)
     
     except KeyboardInterrupt:
         # stop consuming on user key press
