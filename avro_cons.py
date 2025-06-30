@@ -21,11 +21,11 @@ string_deserializer = StringDeserializer('utf_8')
 
 group_id = random.randint(0, 1000)
 
-conf = {'bootstrap.servers': 'pkc-41wq6.eu-west-2.aws.confluent.cloud:9092',
+conf = {'bootstrap.servers': '*** ENTER YOUR BOOTSTRAP URL HERE ***',
         'security.protocol': 'SASL_SSL',
         'sasl.mechanism': 'PLAIN',
-        'sasl.username': 'MQQDTEAGSJFTAURQ',
-        'sasl.password': 'py1KVzV7lyigMU1EmksyWShkosZEnmX+uTZD53e+I9DFzJhBgUA6A34jzYKliOlE',
+        'sasl.username': '*** ENTER YOUR API KEY ***',
+        'sasl.password': '*** ENTER YOUR API KEY SECRET ***',
         'group.id': group_id,
         'enable.auto.commit': 'true',
         'auto.offset.reset': 'earliest',
@@ -96,5 +96,5 @@ def consume_loop(deserializer, consumer, topics):
 
 
 
-topic_to_consume = ["faker_topic_avro"]
+topic_to_consume = ["*** ENTER YOUR TOPIC NAME HERE ***"]
 consume_loop(avro_deserializer, consumerInst, topic_to_consume)
